@@ -348,7 +348,7 @@ function addExperience() {
   html += '<div class="field-row">';
   html += '<div class="field"><label>최대인원 <span class="required">*</span></label>';
   html += '<input type="number" data-exp="' + idx + '" data-field="maxPeople" placeholder="명"></div>';
-  html += '<div class="field"><label>동시 운영 가능 강사 수</label>';
+  html += '<div class="field"><label>동시 운영 가능 강사 수 <span class="required">*</span></label>';
   html += '<input type="number" data-exp="' + idx + '" data-field="instructorCount" placeholder="명"></div>';
   html += '</div>';
 
@@ -514,6 +514,7 @@ function validateForm(data) {
     if (!exp.experienceName) return '체험 ' + (i + 1) + '의 체험명을 입력해주세요.';
     if (!exp.supplyPrice) return '체험 ' + (i + 1) + '의 공급가를 입력해주세요.';
     if (!exp.maxPeople) return '체험 ' + (i + 1) + '의 최대인원을 입력해주세요.';
+    if (!exp.instructorCount) return '체험 ' + (i + 1) + '의 동시 운영 가능 강사 수를 입력해주세요.';
   }
 
   return null;
